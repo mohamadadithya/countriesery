@@ -1,7 +1,3 @@
-# Micawber Boilerplate
+# Countriesery
 
-Micawber is a Sveltekit boilerplate includes Tailwindcss, Postcss, Autoprefixer and Svelte-Meta-Tags.
-
-## Setup
-npm install <br>
-npm run dev
+Countriesery is a website about countries information.
