@@ -45,13 +45,16 @@
 				<h1 class="text-4xl font-bold mb-4">{countryData.name.common}</h1>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
 					<ul>
-						<li><span class="font-bold">Native Name:</span> {countryData.name.official}</li>
-						<li>
+						<li class="mb-2">
+							<span class="font-bold">Native Name:</span>
+							{countryData.name.official}
+						</li>
+						<li class="mb-2">
 							<span class="font-bold">Population:</span>
 							{countryData.population.toLocaleString()}
 						</li>
-						<li><span class="font-bold">Region:</span> {countryData.region}</li>
-						<li>
+						<li class="mb-2"><span class="font-bold">Region:</span> {countryData.region}</li>
+						<li class="mb-2">
 							<span class="font-bold">Sub Region:</span>
 							{#if countryData.subregion}
 								{countryData.subregion}
@@ -59,7 +62,7 @@
 								-
 							{/if}
 						</li>
-						<li>
+						<li class="mb-2">
 							<span class="font-bold">Capital:</span>
 							{#if countryData.capital}
 								{countryData.capital}
@@ -69,8 +72,8 @@
 						</li>
 					</ul>
 					<ul>
-						<li><span class="font-bold">Top Level Domain:</span> {countryData.tld}</li>
-						<li>
+						<li class="mb-2"><span class="font-bold">Top Level Domain:</span> {countryData.tld}</li>
+						<li class="mb-2">
 							<span class="font-bold">Currencies:</span>
 							{#if countryData.hasOwnProperty('currencies')}
 								{countryData.currencies[currency].name} ({countryData.currencies[currency].symbol})
@@ -78,7 +81,7 @@
 								-
 							{/if}
 						</li>
-						<li>
+						<li class="mb-2">
 							<span class="font-bold">Languages:</span>
 							{#if countryData.hasOwnProperty('languages')}
 								{languages.join(', ')}

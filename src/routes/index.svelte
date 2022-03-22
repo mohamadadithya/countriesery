@@ -65,6 +65,8 @@
 	<Container classes="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12">
 		{#if $hasLoading}
 			<Loading />
+		{:else if filteredCountries.length <= 0}
+			<p class="text-gray-500">Country not found.</p>
 		{:else}
 			{#each filteredCountries as country}
 				<Card {country} />

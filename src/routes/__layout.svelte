@@ -1,6 +1,8 @@
 <script>
 	import Navbar from '../components/Navbar.svelte';
 	import '../../static/css/tailwind.css';
+	import Footer from '../components/Footer.svelte';
+	import { hasLoading } from '../stores/countryStore';
 </script>
 
 <svelte:head>
@@ -9,9 +11,18 @@
 		rel="stylesheet"
 		type="text/css"
 	/>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+		rel="stylesheet"
+	/>
 </svelte:head>
 
-<main>
+<main class="font-poppins">
 	<Navbar />
 	<slot />
+	{#if !$hasLoading}
+		<Footer />
+	{/if}
 </main>
