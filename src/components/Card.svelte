@@ -4,7 +4,7 @@
 </script>
 
 <a
-	href={`/country/${country.name.common.toLowerCase()}`}
+	href={`/country/${country.cca3.toLowerCase()}`}
 	class="shadow-lg rounded-lg hover:scale-105 transition-transform duration-200 ease-in-out block"
 	transition:fade
 >
